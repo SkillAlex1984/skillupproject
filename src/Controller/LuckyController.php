@@ -23,9 +23,9 @@ class LuckyController extends Controller
     public function number() {
         $number = mt_rand (1,100);
         $response = new Response('<html><body>Lucky number: '.$number.'</body></html>');
-       // return $response;
+       //return $response;
         return $this->render('lucky/number.html.twig', array(
-            'number' => $number,
+          'number' => $number,
         ));
     }
 }
