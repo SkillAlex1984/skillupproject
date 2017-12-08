@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337833f5-2828-44e6-8db4-ac614f102272" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/722d7508-e04a-492c-b30f-668b98740c93.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Product.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/product/list.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.env.dist" afterPath="$PROJECT_DIR$/.env.dist" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20171208175326.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20171208180515.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" afterPath="$PROJECT_DIR$/src/Controller/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -343,7 +328,7 @@
       <workItem from="1512416679102" duration="6430000" />
       <workItem from="1512494087670" duration="2181000" />
       <workItem from="1512496310664" duration="6328000" />
-      <workItem from="1512752387484" duration="9382000" />
+      <workItem from="1512752387484" duration="9503000" />
     </task>
     <task id="LOCAL-00001" summary="Homework symfony">
       <created>1512422816880</created>
@@ -415,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512752426299</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Homework symfony">
+      <created>1512761815969</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1512761815969</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27198000" />
+    <option name="totallyTimeSpent" value="27319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
