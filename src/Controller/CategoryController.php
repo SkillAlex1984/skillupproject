@@ -24,7 +24,7 @@ class CategoryController extends Controller
      * @param $page
      * @param $session
      *
-     * @return Response
+     * @return \Symfony\Component\HttpFoundation\Response|Response
      *
      */
     public function show ($slug, $page = 1, SessionInterface $session, Request $request)
