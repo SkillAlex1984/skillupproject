@@ -9,6 +9,8 @@
 namespace App\Controller;
 
 
+use App\Entity\Category;
+use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +26,7 @@ class CategoryController extends Controller
      * @param $page
      * @param $session
      *
-     * @return \Symfony\Component\HttpFoundation\Response|Response
+     * @return \Symfony\Component\HttpFoundation\Response
      *
      */
     public function show ($slug, $page = 1, SessionInterface $session, Request $request)
@@ -57,5 +59,48 @@ class CategoryController extends Controller
 
         return$response;
     }
+
+
+    //-------------Задание 2----------
+    /**
+     * @Route("/category-by-id/{id}", name="id_category")
+     */
+    public function showById($id='')
+    {
+        $repo = $this->getDoctrine()->getRepository(Category::class);
+
+        if ($id) {
+            $categories = $repo->findBy(['id'=>$id]);
+        } else {
+            $categories = $repo->findAll();
+        }
+
+        if (!$categories){
+            throw $this->createNotFoundException('Products not found');
+        }
+        return $this->render('category/showById.html.twig', ['categories'=>$categories]);
+
+    }
+
+    //-------------Задание 3----------
+    /**
+     * @Route("/category-all/{name}", name="category_list")
+     */
+    public function listCategoryAll($name='')
+    {
+        $repo = $this->getDoctrine()->getRepository(Category::class);
+
+        if ($name) {
+            $categories = $repo->findBy(['name'=>$name]);
+        } else {
+            $categories = $repo->findAll();
+        }
+
+        if (!$categories){
+            throw $this->createNotFoundException('Products not found');
+        }
+        return $this->render('category/list.html.twig', ['categories'=>$categories]);
+    }
+    //------------------------
 
 }

@@ -41,4 +41,22 @@ class Category
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     * @return Category
+     */
+    public function setName(string $name): Category
+    {
+        $this->name = $name;
+        return $this;
+    }
+
 }
