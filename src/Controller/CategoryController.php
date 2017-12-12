@@ -11,6 +11,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -84,16 +85,19 @@ class CategoryController extends Controller
 
 
     /**
-     * @Route("/category/{id}/{page}", name="category_show", requirements={"page": "\d+"})
+     * @Route("/category/{slug}/{page}", name="category_show", requirements={"page": "\d+"})
+     *
+     * @ParamConverter("slug", options={"mapping": {"slug"="slug"}})
      *
      * @param Category $category
      * @param $page
+     * @param $slug
      * @param $session
      *
      * @return \Symfony\Component\HttpFoundation\Response
      *
      */
-    public function showHome (Category $category, $page = 1, SessionInterface $session, Request $request)
+    public function showHome (Category $category, $page = 1, SessionInterface $session)
     {
         $session->set('lastVisitCtegory', $category->getId());
 
