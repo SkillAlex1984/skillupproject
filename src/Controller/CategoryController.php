@@ -76,10 +76,29 @@ class CategoryController extends Controller
         }
 
         if (!$categories){
-            throw $this->createNotFoundException('Products not found');
+            throw $this->createNotFoundException('Category not found');
         }
         return $this->render('category/showById.html.twig', ['categories'=>$categories]);
 
+    }
+
+
+    /**
+     * @Route("/category/{id}/{page}", name="category_show", requirements={"page": "\d+"})
+     *
+     * @param Category $category
+     * @param $page
+     * @param $session
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     */
+    public function showHome (Category $category, $page = 1, SessionInterface $session, Request $request)
+    {
+        $session->set('lastVisitCtegory', $category->getId());
+
+        return $this->render('category/showById.html.twig', ['category'=>$category, 'page'=>$page]
+        );
     }
 
     //-------------Задание 3----------
@@ -97,7 +116,7 @@ class CategoryController extends Controller
         }
 
         if (!$categories){
-            throw $this->createNotFoundException('Products not found');
+            throw $this->createNotFoundException('Category not found');
         }
         return $this->render('category/list.html.twig', ['categories'=>$categories]);
     }
