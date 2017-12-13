@@ -1,4 +1,7 @@
 <h1>DataBase - category</h1>
-{% for category in categories %}
-    {{ category.name }}<br>
-{% endfor %}
+{% for message in app.flashes('notice') %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+Category: {{ category.name }} <br>
+Page: {{ page }} <br>
