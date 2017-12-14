@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="337833f5-2828-44e6-8db4-ac614f102272" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" />
-      <change beforePath="$PROJECT_DIR$/templates/category/show.html.twig" afterPath="$PROJECT_DIR$/templates/category/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -250,7 +248,7 @@
       <workItem from="1512752387484" duration="9639000" />
       <workItem from="1512928616886" duration="13806000" />
       <workItem from="1513101242782" duration="5050000" />
-      <workItem from="1513189850952" duration="9228000" />
+      <workItem from="1513189850952" duration="9319000" />
     </task>
     <task id="LOCAL-00001" summary="Homework symfony">
       <created>1512422816880</created>
@@ -406,11 +404,25 @@
       <option name="project" value="LOCAL" />
       <updated>1513278174798</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Homework 19 symfony">
+      <created>1513278248272</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1513278248272</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Homework 19 symfony">
+      <created>1513278299324</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1513278299324</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58070000" />
+    <option name="totallyTimeSpent" value="58161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
