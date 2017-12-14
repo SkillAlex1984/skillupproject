@@ -61,4 +61,19 @@ class CategoryController extends Controller
 
         return$response;
     }
+
+    /**
+     * @Route("/category-all", name="category_list")
+     */
+    public function listCategoryAll()
+    {
+        $repo = $this->getDoctrine()->getRepository(Category::class);
+        $categories = $repo->findAll();
+
+
+        if (!$categories){
+            throw $this->createNotFoundException('Category not found');
+        }
+        return $this->render('category/list.html.twig', ['categories'=>$categories]);
+    }
 }
