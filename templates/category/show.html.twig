@@ -8,10 +8,11 @@ Page: {{ page }} <br>
 Продукты:
 {% for product in category.products %}
 <a href = "{{ path('product_show', {'id': product.id}) }}">
-    {{ product.name }} - {{ product.price|number_format(2) }}
+    {{ product.name }} - {{ product.price|number_format(2, ',',' ') }}
 </a>
+    <hr>
 {% endfor %}
 
-<hr>
+
 
 <a href="{{ path('category_message') }}">Add to cart</a>

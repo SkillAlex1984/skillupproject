@@ -23,19 +23,20 @@ class CategoryController extends Controller
     /**
      * @Route("/category/{slug}/{page}", name="category_show", requirements={"page": "\d+"})
      *
-     * @param $slug
+     *@ParamConverter("slug", options={"mapping":{"slug": "slug"}})
+     *
+     * @param Category $category
      * @param $page
      * @param $session
      *
      * @return \Symfony\Component\HttpFoundation\Response
      *
      */
-    public function show ($slug, $page = 1, SessionInterface $session, Request $request)
+    public function show (Category $category, $page = 1, SessionInterface $session)
     {
-        $session->set('lastVisitCtegory', $slug);
-        $param = $request->query->get('param');
+        $session->set('lastVisitCtegory', $category->getId());
 
-        return $this->render('category/show.html.twig', ['slug'=>$slug, 'page'=>$page, 'param'=>$param]
+        return $this->render('category/show.html.twig', ['category'=>$category, 'page'=>$page]
         );
     }
 
@@ -60,70 +61,4 @@ class CategoryController extends Controller
 
         return$response;
     }
-
-
-    //-------------Задание 2----------
-    /**
-     * @Route("/category-by-id/{id}", name="id_category")
-     */
-    public function showById($id='')
-    {
-        $repo = $this->getDoctrine()->getRepository(Category::class);
-
-        if ($id) {
-            $categories = $repo->findBy(['id'=>$id]);
-        } else {
-            $categories = $repo->findAll();
-        }
-
-        if (!$categories){
-            throw $this->createNotFoundException('Category not found');
-        }
-        return $this->render('category/showById.html.twig', ['categories'=>$categories]);
-
-    }
-
-
-    /**
-     * @Route("/category/{slug}/{page}", name="category_show", requirements={"page": "\d+"})
-     *
-     * @ParamConverter("slug", options={"mapping": {"slug"="slug"}})
-     *
-     * @param Category $category
-     * @param $page
-     * @param $slug
-     * @param $session
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
-     */
-    public function showHome (Category $category, $page = 1, SessionInterface $session)
-    {
-        $session->set('lastVisitCtegory', $category->getId());
-
-        return $this->render('category/showById.html.twig', ['category'=>$category, 'page'=>$page]
-        );
-    }
-
-    //-------------Задание 3----------
-    /**
-     * @Route("/category-all/{name}", name="category_list")
-     */
-    public function listCategoryAll($name='')
-    {
-        $repo = $this->getDoctrine()->getRepository(Category::class);
-
-        if ($name) {
-            $categories = $repo->findBy(['name'=>$name]);
-        } else {
-            $categories = $repo->findAll();
-        }
-
-        if (!$categories){
-            throw $this->createNotFoundException('Category not found');
-        }
-        return $this->render('category/list.html.twig', ['categories'=>$categories]);
-    }
-    //------------------------
-
 }
