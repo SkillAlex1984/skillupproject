@@ -10,6 +10,7 @@ namespace App\Controller;
 
 
 use App\Entity\Category;
+use App\Service\Catalogue;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -20,6 +21,17 @@ use Symfony\Flex\Response;
 
 class CategoryController extends Controller
 {
+    /**
+     * @var Catalogue
+     */
+    private $catalogue;
+
+    public function __construct(Catalogue $catalogue)
+    {
+        $this->catalogue = $catalogue;
+    }
+
+
     /**
      * @Route("/category/{slug}/{page}", name="category_show", requirements={"page": "\d+"})
      *
@@ -67,9 +79,7 @@ class CategoryController extends Controller
      */
     public function listCategoryAll()
     {
-        $repo = $this->getDoctrine()->getRepository(Category::class);
-        $categories = $repo->findAll();
-
+        $categories = $this->catalogue->getCategories();
 
         if (!$categories){
             throw $this->createNotFoundException('Category not found');
