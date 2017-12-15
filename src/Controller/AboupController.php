@@ -22,7 +22,7 @@ class AboupController extends Controller
     public function show(SessionInterface $session)
     {
         $url = $this->generateUrl('category_show', [
-            'slug' => 'notebooks',
+            'slug' => 'dvd',
             'param'=>'getparam',
         ], UrlGeneratorInterface::ABSOLUTE_URL);
 
