@@ -34,7 +34,7 @@ class CategoryController extends Controller
      */
     public function show (Category $category, $page = 1, SessionInterface $session)
     {
-        $session->set('lastVisitCtegory', $category->getId());
+        $session->set('lastVisitCtegory', $category->getSlug());
 
         return $this->render('category/show.html.twig', ['category'=>$category, 'page'=>$page]
         );
@@ -45,7 +45,7 @@ class CategoryController extends Controller
      */
     public function message (SessionInterface $session)
     {
-        $this->addFlash('notice', 'You message');
+        $this->addFlash('notice', 'Товар добавлен в корзину');
         $lastCategory = $session->get('lastVisitCtegory');
 
         return $this->redirectToRoute('category_show', ['slug' => $lastCategory]);
