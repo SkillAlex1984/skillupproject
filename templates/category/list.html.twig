@@ -4,8 +4,17 @@
     {{ parent() }} - список категорий товаров
 {% endblock %}
 {% block body %}
+    <style>
+        .centr {
+            text-align: center;
+        }
+
+    </style>
         {% for category in categories %}
-            <a href="{{ path('category_show', {'slug': category.slug}) }}">{{ category.name }}</a>
+            <div class="centr">
+                <a style="font-size: 30px" href="{{ path('category_show', {'slug': category.slug}) }}">{{ category.name }}</a>
+            </div>
+
         <hr>
         {% endfor %}
 {% endblock %}

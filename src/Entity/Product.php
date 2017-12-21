@@ -47,6 +47,31 @@ class Product
     private $category;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(type = "string")
+     */
+    private $url;
+
+    /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    /**
+     * @param string $url
+     * @return Product
+     */
+    public function setUrl(string $url): Product
+    {
+        $this->url = $url;
+        return $this;
+    }
+
+    /**
      * @return mixed
      */
     public function getId()

@@ -86,4 +86,12 @@ class CategoryController extends Controller
         }
         return $this->render('category/list.html.twig', ['categories'=>$categories]);
     }
+
+    /**
+     * @Route("/contacts", name="contact_about_us")
+     */
+    public function contacts ()
+    {
+        return $this->render('about/contacts.html.twig');
+    }
 }

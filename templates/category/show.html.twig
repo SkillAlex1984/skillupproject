@@ -6,16 +6,23 @@
         {% for message in app.flashes('notice') %}
             <p>{{ message }}</p>
         {% endfor %}
-        Category: {{ category.name }}<br>
-        Page: {{ page }} <br>
+        <h1 style="text-align: center">{{ category.name }}<br></h1>
 
-        Продукты:
+
+
+
         {% for product in category.products %}
-        <a href = "{{ path('product_show', {'id': product.id}) }}">
-            {{ product.name }} - {{ product.price|number_format(2, ',',' ') }}
-        </a>
+
+            <div class="row">
+                <div class="col-md-4"> </div>
+                <div class="col-md-4">
+                    <a href = "{{ path('product_show', {'id': product.id}) }}">
+                        {{ product.name }} - {{ product.price|number_format(2, ',',' ') }}
+                    </a>
+                </div>
+                <div class="col-md-4"> <img src="{{ product.url }}"width="100" > </div>
+
+            </div>
             <hr>
         {% endfor %}
-
-    <a href="{{ path('category_message') }}">Add to cart</a>
 {% endblock %}
