@@ -125,4 +125,24 @@ class Category
 
         return $this;
     }
+
+    /**
+     * @return Category
+     */
+    public function getParent(): Category
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @param Category $parent
+     * @return Category
+     */
+    public function setParent(Category $parent): Category
+    {
+        $this->parent = $parent;
+        return $this;
+    }
+
+
 }

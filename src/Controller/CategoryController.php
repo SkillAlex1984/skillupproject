@@ -75,7 +75,7 @@ class CategoryController extends Controller
     }
 
     /**
-     * @Route("/category-all", name="category_list")
+     * @Route("/category", name="category_list")
      */
     public function listCategoryAll()
     {

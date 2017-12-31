@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,9 +34,12 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    {{ knp_menu_render('main') }}
+
                     <ul class="nav navbar-nav">
                         <li><a href="/about">About</a></li>
-                        <li><a href="/category-all">Caterory</a></li>
+                        <li><a href="/category">Caterory</a></li>
                         <li><a href="/contacts">Contacts</a></li>
                     </ul>
 
