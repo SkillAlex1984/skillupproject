@@ -32,6 +32,7 @@ class AboupController extends Controller
         ]);
     }
 
+
     /**
      * @Route("to-about")
      */
