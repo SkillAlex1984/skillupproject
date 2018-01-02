@@ -267,7 +267,7 @@
       <workItem from="1512928616886" duration="13806000" />
       <workItem from="1513101242782" duration="5050000" />
       <workItem from="1513189850952" duration="9319000" />
-      <workItem from="1514791472092" duration="10847000" />
+      <workItem from="1514791472092" duration="10878000" />
     </task>
     <task id="LOCAL-00001" summary="Homework symfony">
       <created>1512422816880</created>
@@ -521,11 +521,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514925064187</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Lesson 23 symfony / Bundle">
+      <created>1514925097556</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1514925097556</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130740000" />
+    <option name="totallyTimeSpent" value="130771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -585,7 +592,8 @@
     <MESSAGE value="Homework 20 symfony" />
     <MESSAGE value="Homework 21 symfony / bootstrap" />
     <MESSAGE value="Homework 22 symfony / knp menu bundle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework 22 symfony / knp menu bundle" />
+    <MESSAGE value="Lesson 23 symfony / Bundle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 23 symfony / Bundle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
