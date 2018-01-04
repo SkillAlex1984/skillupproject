@@ -1,4 +1,7 @@
 {
+    "cocur/slugify": {
+        "version": "v3.0.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -95,11 +98,38 @@
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
     },
+    "sonata-project/admin-bundle": {
+        "version": "3.30.1"
+    },
+    "sonata-project/block-bundle": {
+        "version": "3.9.0"
+    },
+    "sonata-project/cache": {
+        "version": "2.0.1"
+    },
+    "sonata-project/core-bundle": {
+        "version": "3.8.0"
+    },
+    "sonata-project/datagrid-bundle": {
+        "version": "2.3.1"
+    },
+    "sonata-project/doctrine-orm-admin-bundle": {
+        "version": "3.x-dev"
+    },
+    "sonata-project/exporter": {
+        "version": "1.8.0"
+    },
     "swiftmailer/swiftmailer": {
         "version": "v6.0.2"
     },
+    "symfony/asset": {
+        "version": "v4.0.2"
+    },
     "symfony/cache": {
         "version": "v4.0.0"
+    },
+    "symfony/class-loader": {
+        "version": "v3.4.2"
     },
     "symfony/config": {
         "version": "v4.0.0"
@@ -127,6 +157,9 @@
     },
     "symfony/event-dispatcher": {
         "version": "v4.0.0"
+    },
+    "symfony/expression-language": {
+        "version": "v4.0.2"
     },
     "symfony/filesystem": {
         "version": "v4.0.0"
@@ -215,6 +248,9 @@
     "symfony/security": {
         "version": "v4.0.2"
     },
+    "symfony/security-acl": {
+        "version": "v3.0.1"
+    },
     "symfony/security-bundle": {
         "version": "3.3",
         "recipe": {
@@ -286,6 +322,15 @@
     },
     "symfony/yaml": {
         "version": "v4.0.0"
+    },
+    "twig/extensions": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "4851df0afc426b8f07204379d21fca25b6df5d68"
+        }
     },
     "twig/twig": {
         "version": "v2.4.4"
