@@ -54,6 +54,18 @@ class Product
     private $url;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(type = "boolean", options={"default": false})
+     */
+    private $isTop;
+
+    public function __construct()
+    {
+        $this->isTop = false;
+    }
+
+    /**
      * @return string
      */
     public function getUrl(): string
@@ -159,6 +171,22 @@ class Product
     {
         $this->category = $category;
         return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTop(): bool
+    {
+        return $this->isTop;
+    }
+
+    /**
+     * @param bool $isTop
+     */
+    public function setIsTop(bool $isTop): void
+    {
+        $this->isTop = $isTop;
     }
 
 

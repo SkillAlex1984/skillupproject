@@ -5,9 +5,29 @@
 {% endblock %}
 
 {% block body %}
+        <div class="row">
+            {% for product in topProducts %}
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 product">
+                    <img src="{{ product.url }}"width="100" >
+                    <p>
+                        <span class="price">Цена: {{ product.price|number_format(2, ',', ' ') }}</span>
+                        Производитель: {{ product.name }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
     Логин: Tester
     Пароль: 123456
-    Homepage
+
 
 {% endblock %}
