@@ -129,7 +129,7 @@ class Category
     /**
      * @return Category
      */
-    public function getParent(): Category
+    public function getParent(): ? Category
     {
         return $this->parent;
     }
@@ -142,6 +142,27 @@ class Category
     {
         $this->parent = $parent;
         return $this;
+    }
+
+    public function getFullName ()
+    {
+        $ret = [];
+        if ($this->parent) {
+            $parent = $this->parent;
+
+            while ($parent){
+                $ret[] = $parent->name;
+                $parent = $parent->parent;
+            }
+        }
+        $ret[] = $this->name;
+
+        return implode(' / ',$ret);
+    }
+
+    public function __toString()
+    {
+        return $this->getName();
     }
 
 

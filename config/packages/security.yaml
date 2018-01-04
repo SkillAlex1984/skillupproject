@@ -28,5 +28,4 @@ security:
             logout:       true
 
     access_control:
-            # require ROLE_ADMIN for /admin*
             - { path: ^/profile, roles: ROLE_USER }

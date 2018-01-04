@@ -1,12 +1,16 @@
 {
     "type": "project",
     "license": "proprietary",
+    "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
         "friendsofsymfony/user-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "^2.0",
         "ocramius/proxy-manager": "2.0.x",
         "sensio/framework-extra-bundle": "^5.1",
+        "sonata-project/admin-bundle": "^3.30",
+        "sonata-project/doctrine-orm-admin-bundle": "^3.3",
+        "symfony/asset": "^4.0",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
@@ -16,7 +20,6 @@
         "symfony/profiler-pack": "^1.0",
         "symfony/security-bundle": "^4.0",
         "symfony/swiftmailer-bundle": "^3.1",
-        "symfony/translation": "^4.0",
         "symfony/twig-bundle": "^4.0",
         "symfony/web-server-bundle": "^4.0",
         "symfony/yaml": "^4.0"
@@ -57,7 +60,7 @@
     },
     "extra": {
         "symfony": {
-            "id": "01C09NA0BY4DFY05PKY7ZYB7PQ",
+            "id": "01C09HV32N61TW9W4TH38HFYWJ",
             "allow-contrib": false
         }
     }
