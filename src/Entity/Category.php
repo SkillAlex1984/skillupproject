@@ -72,7 +72,7 @@ class Category
      */
     public function getName(): ? string
     {
-        return $this->name;
+        return $this->name ?: '';
     }
 
     /**
@@ -106,7 +106,7 @@ class Category
     /**
      * @return Product[]|ArrayCollection
      */
-    public function getProducts(): Collection
+    public function getProducts(): ? Collection
     {
         return $this->products;
     }
