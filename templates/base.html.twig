@@ -5,8 +5,20 @@
     <title>
         {% block title %}
             Интернет магазин Skill Up
-        {% endblock %}</title>
-
+        {% endblock %}
+    </title>
+    <style>
+        html {
+            height: 100%; /* Высота страницы */
+        }
+        body {
+            background:
+                    url('/../favicon.png') right bottom no-repeat; /* Путь к файлу с изображением,
+                                                   положение в правом нижнем углу
+                                                   и отмена повторения фона */
+            margin-right: 200px; /* Отступ справа */
+        }
+    </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,7 +31,6 @@
 </head>
 
 <body>
-
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->

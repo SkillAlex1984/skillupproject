@@ -4,7 +4,9 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/behat/transliterator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cocur/slugify" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/imagine/imagine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/liip/imagine-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/admin-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/block-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/cache" />
@@ -23,23 +25,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/dependency-injection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/vendor/twig/twig/test/Twig/Tests/Loader/Fixtures/phar/phar-sample.phar/" />
-          <root url="phar://$MODULE_DIR$/vendor/symfony/dependency-injection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/vendor/cocur/slugify" />
+          <root url="file://$MODULE_DIR$/vendor/imagine/imagine" />
           <root url="file://$MODULE_DIR$/vendor/jms/metadata" />
+          <root url="file://$MODULE_DIR$/vendor/liip/imagine-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/admin-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/block-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/cache" />
@@ -58,7 +50,9 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/behat/transliterator" />
           <root url="file://$MODULE_DIR$/vendor/cocur/slugify" />
+          <root url="file://$MODULE_DIR$/vendor/imagine/imagine" />
           <root url="file://$MODULE_DIR$/vendor/jms/metadata" />
+          <root url="file://$MODULE_DIR$/vendor/liip/imagine-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/admin-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/block-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sonata-project/cache" />

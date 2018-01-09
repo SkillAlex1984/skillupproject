@@ -111,6 +111,7 @@ class Category
         return $this->products;
     }
 
+
     public function addProduct(Product $product)
     {
         $this->products->add($product);

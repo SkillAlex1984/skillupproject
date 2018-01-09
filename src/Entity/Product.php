@@ -137,7 +137,7 @@ class Product
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName(): ? string
     {
         return $this->name;
     }
@@ -155,7 +155,7 @@ class Product
     /**
      * @return string
      */
-    public function getPrice(): string
+    public function getPrice(): ? string
     {
         return $this->price;
     }
@@ -173,7 +173,7 @@ class Product
     /**
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription(): ? string
     {
         return $this->description;
     }
@@ -191,7 +191,7 @@ class Product
     /**
      * @return Category
      */
-    public function getCategory(): Category
+    public function getCategory():? Category
     {
         return $this->category;
     }
@@ -269,8 +269,7 @@ class Product
 
     public function __toString()
     {
-        return $this->getName();
+        return $this->getName() ?: '';
     }
-
 
 }
