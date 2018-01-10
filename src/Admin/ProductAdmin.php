@@ -9,6 +9,7 @@
 namespace App\Admin;
 
 
+use function PHPSTORM_META\type;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
