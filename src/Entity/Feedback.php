@@ -48,7 +48,7 @@ class Feedback
     /**
      * Feedback constructor.
      */
-    public function __construct($id)
+    public function __construct()
     {
        $this->name = '';
        $this->email = '';
