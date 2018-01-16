@@ -9,6 +9,7 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -302,9 +303,9 @@ class Order
     }
 
     /**
-     * @return OrderItem[]|ArrayCollection
+     * @return OrderItem[]|Collection
      */
-    public function getItems(): ArrayCollection
+    public function getItems(): Collection
     {
         return $this->items;
     }
@@ -329,8 +330,20 @@ class Order
     public function removeItem (OrderItem $item)
     {
         $this->items->removeElement($item);
+        $this->recalculateItems();
 
         return $this;
+    }
+
+    public function recalculateItems()
+    {
+        $this->count = 0;
+        $this->amount = 0;
+
+        foreach ( $this->items as $item) {
+            $this->count += $item->getCount();
+            $this->amount += $item->getAmount();
+        }
     }
 
 

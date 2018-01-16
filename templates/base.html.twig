@@ -62,6 +62,17 @@
                     </form>
                     <ul class="nav navbar-nav navbar-right">
 
+                        {% if orderService.currentOrder.items.count %}
+
+                        <li>
+                            <p class="navbar-test">
+                                <span class="glyphicon glyphicon-shopping-cart"></span>
+                                <span class="badge">{{ orderService.currentOrder.items.count }}</span>
+                                {{ orderService.currentOrder.items.count }} грн.
+                            </p>
+                        </li>
+                        {% endif %}
+
                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                             <li>
                                 <p class="navbar-text">{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |</p>

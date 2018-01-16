@@ -11,22 +11,36 @@ namespace App\Controller;
 
 use App\Entity\Order;
 use App\Entity\OrderItem;
+use App\Entity\Product;
+use App\Service\Orders;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Category;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class OrderController extends Controller
 {
 
     /**
-     * @Route("/cart/{id}", name="cart")
+     * @Route("cart", name="cart")
      */
-    public function showCart()
+    public function showCart(Orders $orders)
     {
-        $order = $this->getDoctrine()->getRepository(Order::class)->findAll();
+        return $this->render('orders/show.html.twig',
+                                  ['order'=>$orders->getCurrentOrder()]);
+    }
 
-        return $this->render('orders/show.html.twig', ['order'=>$order]);
+    /**
+     * @Route("order/add-product/{id}/{count}", name="order_add_product",
+     *          requirements={"id": "\d+", "count": "\d+(\.\d+)?"})
+     */
+    public function addProduct (Product $product, float $count,
+                                Orders $orders, Request $request)
+    {
+        $orders->addProduct($product, $count);
+
+        return $this->redirect($request->headers->get('referer'));
     }
 
 

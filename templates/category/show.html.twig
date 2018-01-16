@@ -7,26 +7,7 @@
             <p>{{ message }}</p>
         {% endfor %}
         <h1 style="text-align: center">{{ category.name }}<br></h1>
-
-
-
-
-        {% for product in category.products %}
-
-            <div class="row">
-                <div class="col-md-4"> </div>
-                <div class="col-md-4">
-                    <a href = "{{ path('product_show', {'id': product.id}) }}">
-                        {{ product.name }} - {{ product.price|number_format(2, ',',' ') }}
-                    </a>
-                </div>
-                <div class="col-md-4"> <img src="{{ product.url }}"width="100" > </div>
-
-            </div>
-            <hr>
-        {% endfor %}
-    <div style="text-align: center">
-        <a href="/category">Вернуться к списку категорий</a>
-    </div>
-
+        <div>
+            {% include 'partials/products.html.twig' with {'products': category.products} %}
+        </div>
 {% endblock %}
