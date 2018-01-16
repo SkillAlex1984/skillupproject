@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table border="1">
+        <thead>
+            <td>id</td>
+            <td>Количество</td>
+        </thead>
+
+    {% for orders in order %}
+        <tr>
+            <td>{{ orders.id }}</td>
+
+        </tr>
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

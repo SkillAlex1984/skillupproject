@@ -11,6 +11,7 @@ namespace App\Service;
 
 use App\Controller\ProductController;
 use App\Entity\Category;
+use App\Entity\Order;
 use App\Entity\Product;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -28,14 +29,23 @@ class Catalogue
     }
 
     /**
-     * @return \App\Entity\Category[]|array
-     */
+ * @return \App\Entity\Category[]|array
+ */
     public function getCategories ()
     {
         $repo = $this->em->getRepository(Category::class);
 
         return $repo->findAll();
+    }
 
+    /**
+     * @return \App\Entity\Order[]|array
+     */
+    public function getOrders ()
+    {
+        $repo = $this->em->getRepository(Order::class);
+
+        return $repo->findAll();
     }
 
     /**
