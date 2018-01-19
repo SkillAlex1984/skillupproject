@@ -16,6 +16,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+
 class Orders extends Controller
 {
     /**
@@ -72,5 +73,14 @@ class Orders extends Controller
 
         $existingItem->addCount($count);
         $this->em->flush();
+    }
+
+    public function deleteItem (OrderItem $item)
+    {
+        $order = $this->getCurrentOrder();
+        $item = $order->getItems();
+        $item->removeElement($item);
+        $this->em->flush();
+
     }
 }

@@ -10,15 +10,19 @@
             <th>Цена</th>
             <th>Количество</th>
             <th>Стоимость</th>
+            <th></th>
+
         </tr>
 
         {# @var item \App\Entity\OrderItem #}
         {% for item in order.items %}
             <tr>
-                <td>{{ item.product.name }}</td>
-                <td>{{ item.product.price }}</td>
-                <td>{{ item.count }}</td>
+                <td>{{ item.product.name }} </td>
+                <td>{{ item.product.price }} </td>
+                <td>{{ item.count }} </td>
                 <td>{{ item.amount }}</td>
+                <td>-</td>
+
             </tr>
         {% endfor %}
 

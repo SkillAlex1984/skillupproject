@@ -43,6 +43,20 @@ class OrderController extends Controller
         return $this->redirect($request->headers->get('referer'));
     }
 
+    /**
+     * @Route ("order/remove-item", name="delete_order_product")
+     *
+     */
+    public function delProduct (OrderItem $item,
+                                Orders $orders, Request $request)
+    {
+        $orders->deleteItem($item);
+
+        return $this->redirect($request->headers->get('referer'));
+    }
+
+
+
 
 
 }
