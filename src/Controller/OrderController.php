@@ -12,6 +12,7 @@ namespace App\Controller;
 use App\Entity\Order;
 use App\Entity\OrderItem;
 use App\Entity\Product;
+use App\Form\OrderType;
 use App\Service\Orders;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Category;
@@ -55,8 +56,27 @@ class OrderController extends Controller
         return $this->redirect($request->headers->get('referer'));
     }
 
+    /**
+     * @Route("order/complete", name="order_complete")
+     */
+    public function completeOrder(Orders $orders, Request $request)
+    {
+        $order = $orders->getCurrentOrder();
+        $form = $this->createForm(OrderType::class, $order);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+        }
+
+        return $this->render('orders/completeForm.html.twig',[
+            'order' => $order,
+            'form' => $form->createView()
+        ]);
 
 
 
+    }
 
 }

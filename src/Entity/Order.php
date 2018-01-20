@@ -11,6 +11,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -56,18 +57,26 @@ class Order
      */
     private $amount;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", length=250, options={"default": ""})
+     */
+    private $costomerName;
+
 
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=250)
+     * @ORM\Column(type="string", length=250, options={"default": ""})
      */
     private $phone;
 
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=250)
+     * @ORM\Column(type="string", length=250, options={"default": ""})
+     * @Assert\NotBlank()
      */
     private $email;
 
@@ -115,6 +124,7 @@ class Order
         $this->createdAt = new \DateTime();
         $this->count = 0;
         $this->amount = 0;
+        $this->costomerName = '';
         $this->phone = '';
         $this->email = '';
         $this->status = self::STATUS_DRAFT;
@@ -211,6 +221,27 @@ class Order
         $this->amount = $amount;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getCostomerName(): string
+    {
+        return $this->costomerName;
+    }
+
+    /**
+     * @param string $costomerName
+     * @return Order
+     */
+    public function setCostomerName(string $costomerName): Order
+    {
+        $this->costomerName = $costomerName;
+        return $this;
+    }
+
+
+
 
     /**
      * @return string
