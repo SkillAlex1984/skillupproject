@@ -78,8 +78,11 @@ class Orders extends Controller
     public function deleteItem (OrderItem $item)
     {
         $order = $this->getCurrentOrder();
-        $item = $order->getItems();
-        $item->removeElement($item);
+
+        $order->removeItem($item);
+        $order->recalculateItems();
+        $this->em->remove($item);
+
         $this->em->flush();
 
     }

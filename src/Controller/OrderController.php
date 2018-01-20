@@ -44,7 +44,7 @@ class OrderController extends Controller
     }
 
     /**
-     * @Route ("order/remove-item", name="delete_order_product")
+     * @Route ("order/remove/{id}", name="delete_order_product")
      *
      */
     public function delProduct (OrderItem $item,
@@ -52,11 +52,7 @@ class OrderController extends Controller
     {
         $orders->deleteItem($item);
 
-        return $this->redirect($request->headers->get('referer'));
+        return $this->redirectToRoute('cart');
     }
-
-
-
-
 
 }

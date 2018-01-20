@@ -21,7 +21,7 @@
                 <td>{{ item.product.price }} </td>
                 <td>{{ item.count }} </td>
                 <td>{{ item.amount }}</td>
-                <td>-</td>
+                <td> <a href="{{ path('delete_order_product', {'id': item.id}) }}"> X </a></td>
 
             </tr>
         {% endfor %}
