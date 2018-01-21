@@ -7,4 +7,4 @@ twig:
         - 'bootstrap_3_layout.html.twig'
 
     globals:
-        orderService: '@App\Service\Orders'
+        ordersService: '@App\Service\Orders'

@@ -8,8 +8,13 @@
     {% include 'orders/items.html.twig' with {'order': order} %}
 
     <h2>Информация о получателе</h2>
-        {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <button type="submit" class="btn btn-default">Send</button>
-        {{ form_end(form) }}
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <button type="submit" class="btn btn-default">Send</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
 </div>
+{% endblock %}

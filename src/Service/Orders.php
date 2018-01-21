@@ -41,7 +41,7 @@ class Orders extends Controller
 
         $order = $id ? $this->em->find(Order::class, $id) : null;
 
-        if (!$order){
+        if (!$order || $order->getStatus() !=Order::STATUS_DRAFT ){
             $order = new Order();
             $this->em->persist($order);
             $this->em->flush();
@@ -78,9 +78,15 @@ class Orders extends Controller
     public function deleteItem (OrderItem $item)
     {
         $order = $this->getCurrentOrder();
-        $item = $order->getItems();
-        $item->removeElement($item);
+        $order->removeItem($item);
+        $order->recalculateItems();
+        $this->em->remove($item);
         $this->em->flush();
+    }
 
+    public function makeOrder (Order $order)
+    {
+        $order->setStatus(Order::STATUS_ORDERED);
+        $this->em->flush();
     }
 }

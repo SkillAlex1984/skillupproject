@@ -62,15 +62,15 @@
                     </form>
                     <ul class="nav navbar-nav navbar-right">
 
-                        {% if orderService.currentOrder.items.count %}
+                        {% if ordersService.currentOrder.items.count %}
 
-                        <li>
-                            <p class="navbar-test">
-                                <span class="glyphicon glyphicon-shopping-cart"></span>
-                                <span class="badge">{{ orderService.currentOrder.items.count }}</span>
-                                {{ orderService.currentOrder.items.count }} грн.
-                            </p>
-                        </li>
+                            <li>
+                                <p class="navbar-text">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    <span class="badge">{{ ordersService.currentOrder.count }}</span>
+                                    <a href="/cart">{{ ordersService.currentOrder.amount }} грн</a>
+                                </p>
+                            </li>
                         {% endif %}
 
                         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
