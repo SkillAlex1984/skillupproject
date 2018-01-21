@@ -396,14 +396,7 @@
       <workItem from="1515776321755" duration="38831000" />
       <workItem from="1516212331618" duration="11219000" />
       <workItem from="1516303861754" duration="569000" />
-      <workItem from="1516380535548" duration="15490000" />
-    </task>
-    <task id="LOCAL-00012" summary="Homework symfony">
-      <created>1512761921895</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1512761921895</updated>
+      <workItem from="1516380535548" duration="15541000" />
     </task>
     <task id="LOCAL-00013" summary="Homework symfony">
       <created>1512931707996</created>
@@ -741,11 +734,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516454855128</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Lesson 28 Symfony / homework del from basket">
+      <created>1516531020389</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1516531020389</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235071000" />
+    <option name="totallyTimeSpent" value="235122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -816,7 +816,8 @@
     <MESSAGE value="Lesson 28 Symfony / create cart" />
     <MESSAGE value="Lesson 29 Symfony / create order" />
     <MESSAGE value="Lesson 28 Symfony / del from basket" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 28 Symfony / del from basket" />
+    <MESSAGE value="Lesson 28 Symfony / homework del from basket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 28 Symfony / homework del from basket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
