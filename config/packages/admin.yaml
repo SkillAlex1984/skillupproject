@@ -11,7 +11,7 @@ services:
         class: App\Admin\CategoryAdmin
         arguments: [~, App\Entity\Category, ~]
         tags:
-            - { name: sonata.admin, group: Catalog, manager_type: orm, label: Category }
+            - { name: sonata.admin, group: Catalog, manager_type: orm, label: Категории }
         public: true
 
 
@@ -19,6 +19,13 @@ services:
     admin.product:
         class: App\Admin\ProductAdmin
         arguments: [~, App\Entity\Product, ~]
+        tags:
+            - { name: sonata.admin, group: Catalog, manager_type: orm, label: Товары }
+        public: true
+
+    admin.orders:
+        class: App\Admin\OrdersAdmin
+        arguments: [~, App\Entity\Order, ~]
         tags:
             - { name: sonata.admin, group: Catalog, manager_type: orm, label: Товары }
         public: true
