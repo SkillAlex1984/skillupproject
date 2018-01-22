@@ -140,7 +140,7 @@ class Order
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ? int
     {
         return $this->id;
     }
@@ -311,10 +311,10 @@ class Order
     }
 
     /**
-     * @param int $status
+     * @param Order $status
      * @return Order
      */
-    public function setStatus(int $status): Order
+    public function setStatus(Order $status): Order
     {
         $this->status = $status;
         return $this;
@@ -380,6 +380,11 @@ class Order
             $this->count += $item->getCount();
             $this->amount += $item->getAmount();
         }
+    }
+
+    public function __toString()
+    {
+        return $this->getCostomerName();
     }
 
 

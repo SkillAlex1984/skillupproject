@@ -27,5 +27,5 @@ services:
         class: App\Admin\OrdersAdmin
         arguments: [~, App\Entity\Order, ~]
         tags:
-            - { name: sonata.admin, group: Catalog, manager_type: orm, label: Товары }
+            - { name: sonata.admin, group: Catalog, manager_type: orm, label: Заказы }
         public: true
