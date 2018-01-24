@@ -5,3 +5,8 @@ Is Top: ТОП
 Description: Описание
 Product List: Список товаров
 default: По умолчанию
+draft: черновик
+ordered: заказано
+sent: отправлен
+received: получено
+comleted: оплачен
