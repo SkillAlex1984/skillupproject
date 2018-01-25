@@ -1,0 +1,12 @@
+{% extends 'exm_base.html.twig' %}
+
+{% block body %}
+<h1>страница поста</h1>
+    {{ post.heading }}<br>
+    <hr>
+    {{ post.textPost }}<br>
+    <hr>
+
+
+    <a href="{{ path('edit_post', {'id': post.id}) }}">Редактировать пост</a>
+{% endblock %}

@@ -10,12 +10,22 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+* @ORM\Entity
+* @ORM\Table(name="post")
+*/
 class Post
 {
 
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
      * @var \DateTime
-     *
      * @ORM\Column(type="datetime")
      *
      */
@@ -36,9 +46,28 @@ class Post
     private $textPost;
 
     /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     * @return Post
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+
+    /**
      * @return \DateTime
      */
-    public function getDataPost(): \DateTime
+    public function getDataPost(): ? \DateTime
     {
         return $this->dataPost;
     }
@@ -56,7 +85,7 @@ class Post
     /**
      * @return string
      */
-    public function getHeading(): string
+    public function getHeading(): ? string
     {
         return $this->heading;
     }
@@ -74,7 +103,7 @@ class Post
     /**
      * @return string
      */
-    public function getTextPost(): string
+    public function getTextPost(): ? string
     {
         return $this->textPost;
     }
@@ -88,5 +117,6 @@ class Post
         $this->textPost = $textPost;
         return $this;
     }
+
 
 }

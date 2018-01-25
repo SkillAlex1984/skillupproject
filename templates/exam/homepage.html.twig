@@ -1,0 +1,18 @@
+{% extends 'exm_base.html.twig' %}
+
+{% block body %}
+<h1>главная</h1>
+<div style="text-align: center">
+
+    <h1><a href="{{ path('add_post') }}">ДОБАВИТЬ НОВЫЙ ПОСТ</a> </h1>
+    <hr>
+
+    {% for post in posts %}
+        <a href="{{ path('post_page', {'id': post.id}) }}">{{ post.heading }}</a><br>
+        <br>
+
+        <hr>
+    {% endfor %}
+</div>
+
+{% endblock %}
