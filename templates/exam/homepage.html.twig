@@ -8,7 +8,9 @@
     <hr>
 
     {% for post in posts %}
+        {{ post.dataPost|date('Y-m-d') }}
         <a href="{{ path('post_page', {'id': post.id}) }}">{{ post.heading }}</a><br>
+
         <br>
 
         <hr>

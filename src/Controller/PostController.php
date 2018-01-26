@@ -13,6 +13,7 @@ use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Console\Tests\Fixtures\DescriptorCommand1;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -40,7 +41,7 @@ class PostController extends Controller
     {
         $repo = $this->getDoctrine()->getRepository(Post::class);
 
-        $posts = $repo->findAll();
+        $posts = $repo->findBy([], ['dataPost' => 'DESC'], 3);
 
         return $this->render('exam/homepage.html.twig', ['posts'=>$posts]);
     }
@@ -70,7 +71,7 @@ class PostController extends Controller
         $post = new Post();
 
         $form = $this->createFormBuilder($post)
-            ->add('dataPost', DateType::class, array('widget' => 'single_text'))
+            ->add('dataPost', DateType::class)
             ->add('heading', TextType::class)
             ->add('textPost', TextType::class)
 
